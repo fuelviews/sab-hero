@@ -58,7 +58,7 @@ class SabHeroCommand extends Command
         $this->runShellCommand("php artisan vendor:publish --tag=forms-config {$force}");
         $this->runShellCommand("php artisan vendor:publish --tag=layouts-wrapper-seeders {$force}");
         $this->runShellCommand("php artisan vendor:publish --tag=layouts-wrapper-models {$force}");
-        $this->runShellCommand("php artisan vendor:publish --tag=layouts-wrapper-welcome --force");
+        $this->runShellCommand('php artisan vendor:publish --tag=layouts-wrapper-welcome --force');
         $this->runShellCommand("php artisan vendor:publish --tag=seo-migrations {$force}");
         $this->runShellCommand("php artisan vendor:publish --tag=seo-config {$force}");
         $this->runShellCommand("php artisan vendor:publish --provider='Spatie\MediaLibrary\MediaLibraryServiceProvider' --tag=medialibrary-migrations {$force}");
