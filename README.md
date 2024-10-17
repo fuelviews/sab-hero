@@ -1,4 +1,4 @@
-# Laravel Service Area Business Hero Package
+# Service Area Business Hero Package
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/fuelviews/sab-hero.svg?style=flat-square)](https://packagist.org/packages/fuelviews/sab-hero)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/fuelviews/sab-hero/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/fuelviews/sab-hero/actions?query=workflow%3Arun-tests+branch%3Amain)
