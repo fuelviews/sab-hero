@@ -2,6 +2,14 @@
 
 All notable changes to `sab-hero` will be documented in this file.
 
+## v0.0.2 - 2024-10-17
+
+### What's Changed
+
+* Updated the SabHeroCommand.php file to use the --force flag when publishing the layouts-wrapper-welcome tag, and added the .gitattributes, .gitignore, and CHANGELOG.md.stub files to the list of files to be published. by @thejmitchener in https://github.com/fuelviews/sab-hero/pull/2
+
+**Full Changelog**: https://github.com/fuelviews/sab-hero/compare/v0.0.1...v0.0.2
+
 ## v0.0.1 - 2024-10-17
 
 ### What's Changed
