@@ -13,17 +13,17 @@ You can install the package via composer:
 composer require fuelviews/sab-hero:^0.0
 ```
 
-You can initialize the package using the install command:
+You can initialize the package using the installation command:
 
 ```bash
-php artisan SabHero:install
+php artisan sab-hero:install
 ```
 
-You can force initialize the package using the install command:
+You can force initialize the package using the installation command:
 
 
 ```bash
-php artisan SabHero:install --force
+php artisan sab-hero:install --force
 ```
 
 ## Testing
