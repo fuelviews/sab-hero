@@ -10,6 +10,14 @@ All notable changes to `sab-hero` will be documented in this file.
 
 **Full Changelog**: https://github.com/fuelviews/sab-hero/compare/v0.0.4...v0.0.5
 
+## v0.0.5 - 2024-10-18
+
+### What's Changed
+
+* Another workflow test by @thejmitchener in https://github.com/fuelviews/sab-hero/pull/4
+
+**Full Changelog**: https://github.com/fuelviews/sab-hero/compare/v0.0.3...v0.0.4
+
 ## v0.0.3 - 2024-10-18
 
 ### What's Changed
