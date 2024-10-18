@@ -3,5 +3,4 @@
 namespace Fuelviews\SabHero;
 
 class SabHero {
-
 }
