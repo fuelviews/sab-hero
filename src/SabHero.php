@@ -2,4 +2,7 @@
 
 namespace Fuelviews\SabHero;
 
-class SabHero {}
+class SabHero
+{
+    // test
+}
