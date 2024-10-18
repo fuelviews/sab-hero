@@ -1,0 +1,122 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
+import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
+
+/** @type {import('tailwindcss').Config} */
+export default {
+    content: [
+        './resources/**/*.{js,vue,blade.php}',
+        './vendor/fuelviews/laravel-*/resources/**/*.{js,vue,blade.php}',
+    ],
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ['"Ubuntu"', ...defaultTheme.fontFamily.sans],
+                serif: ['"Ubuntu"', ...defaultTheme.fontFamily.sans],
+                brand: ['"Ubuntu"'],
+            },
+            colors: {
+                'prime': {
+                    DEFAULT: '#003082',
+                    50: '#3B83FF',
+                    100: '#2676FF',
+                    200: '#005DFC',
+                    300: '#004ED4',
+                    400: '#003FAB',
+                    500: '#003082',
+                    600: '#001B4A',
+                    700: '#000712',
+                    800: '#000000',
+                    900: '#000000',
+                    950: '#000000',
+                },
+                'alt': {
+                    DEFAULT: '#FF0000',
+                    50: '#FFB8B8',
+                    100: '#FFA3A3',
+                    200: '#FF7A7A',
+                    300: '#FF5252',
+                    400: '#FF2929',
+                    500: '#FF0000',
+                    600: '#C70000',
+                    700: '#8F0000',
+                    800: '#570000',
+                    900: '#1F0000',
+                    950: '#030000',
+                },
+                'cta': {
+                    DEFAULT: '#F6DB32',
+                    50: '#FEFAE2',
+                    100: '#FDF6CE',
+                    200: '#FBF0A7',
+                    300: '#F9E980',
+                    400: '#F8E259',
+                    500: '#F6DB32',
+                    600: '#E6C80A',
+                    700: '#B09908',
+                    800: '#7A6A05',
+                    900: '#453C03',
+                    950: '#2A2402',
+                },
+                'background': {
+                    DEFAULT: '#F3F4F6',
+                    50: '#FFFFFF',
+                    100: '#FFFFFF',
+                    200: '#FFFFFF',
+                    300: '#FFFFFF',
+                    400: '#FFFFFF',
+                    500: '#F3F4F6',
+                    600: '#D3D7DE',
+                    700: '#B3B9C6',
+                    800: '#939CAE',
+                    900: '#737E96',
+                    950: '#657187',
+                },
+                'tint' : '#003082', //this sets the color of the tint
+                'type' : '#1f2937', //this sets the color of most body text
+                'hero-type' : '#fff',
+                'footer-back' : '#083137', //the color of the footer background
+                'footer-type' : '#fff', //footer text color
+                'legal-type' : '#5D6977', //color of bottom bar text
+                'legal-link' : '#14b8a6',
+            },
+            opacity: {
+                'tint': '0.15', //this sets the opacity level on the tint
+            },
+            maxWidth: {
+                'standard': '80rem',
+                'waistline': '64rem', //this sets the width of 'skinny' features/elements
+              },
+            borderRadius: { //writes out the 'rounded' classes
+                'standard': '0.8rem;',
+            },
+            textColor: {
+                'link': {
+                    DEFAULT: '#3490DC',
+                    50: '#D1E6F7',
+                    100: '#BFDCF4',
+                    200: '#9CC9EE',
+                    300: '#7AB6E8',
+                    400: '#57A3E2',
+                    500: '#3490DC',
+                    600: '#2073B8',
+                    700: '#185588',
+                    800: '#0F3758',
+                    900: '#071929',
+                    950: '#030A11',
+                },
+            },
+            fontWeight: {
+                'standard-weight': '800'
+            }
+        },
+    },
+    plugins: [
+        forms,
+        typography
+    ],
+    corePlugins: {
+        scale: true,
+    },
+};
+
