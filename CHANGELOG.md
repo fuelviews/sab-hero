@@ -2,6 +2,14 @@
 
 All notable changes to `sab-hero` will be documented in this file.
 
+## v0.0.8 - 2024-10-18
+
+### What's Changed
+
+* Refactor SabHero class to improve code readability and maintainability. by @thejmitchener in https://github.com/fuelviews/sab-hero/pull/8
+
+**Full Changelog**: https://github.com/fuelviews/sab-hero/commits/v0.0.8
+
 ## v0.0.7 - 2024-10-18
 
 ### What's Changed
