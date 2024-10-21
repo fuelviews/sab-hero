@@ -2,6 +2,15 @@
 
 All notable changes to `sab-hero` will be documented in this file.
 
+## v0.0.8 - 2024-10-21
+
+### What's Changed
+
+* Add test execution step to the GitHub Actions workflow. by @thejmitchener in https://github.com/fuelviews/sab-hero/pull/21
+* Added livewire/livewire package as a dependency and updated the required version of spatie/laravel-package-tools in composer.json. by @thejmitchener in https://github.com/fuelviews/sab-hero/pull/29
+
+**Full Changelog**: https://github.com/fuelviews/sab-hero/commits/v0.0.8
+
 ## v0.0.7 - 2024-10-21
 
 ### What's Changed
