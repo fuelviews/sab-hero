@@ -2,6 +2,15 @@
 
 All notable changes to `sab-hero` will be documented in this file.
 
+## v0.0.7 - 2024-10-21
+
+### What's Changed
+
+* Add test execution step to the GitHub Actions workflow. by @thejmitchener in https://github.com/fuelviews/sab-hero/pull/21
+* Update composer.json to require the latest version of spatie/laravel-package-tools and add new dependencies for development purposes. by @thejmitchener in https://github.com/fuelviews/sab-hero/pull/28
+
+**Full Changelog**: https://github.com/fuelviews/sab-hero/commits/v0.0.7
+
 ## v0.0.6 - 2024-10-21
 
 ### What's Changed
