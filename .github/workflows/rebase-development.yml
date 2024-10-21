@@ -1,4 +1,4 @@
-name: Release to Production
+name: Rebase Development
 
 on:
   workflow_dispatch:
