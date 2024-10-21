@@ -4,5 +4,5 @@ namespace Fuelviews\SabHero;
 
 class SabHero
 {
-    // i've done it //
+    // i've done it
 }

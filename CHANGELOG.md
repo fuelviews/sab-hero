@@ -2,6 +2,15 @@
 
 All notable changes to `sab-hero` will be documented in this file.
 
+## v0.0.5 - 2024-10-21
+
+### What's Changed
+
+* Add test execution step to the GitHub Actions workflow. by @thejmitchener in https://github.com/fuelviews/sab-hero/pull/21
+* Remove unnecessary comment in SabHero class. by @thejmitchener in https://github.com/fuelviews/sab-hero/pull/26
+
+**Full Changelog**: https://github.com/fuelviews/sab-hero/commits/v0.0.5
+
 ## v0.0.4 - 2024-10-21
 
 ### What's Changed
