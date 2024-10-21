@@ -5872,7 +5872,7 @@
                 "brianium/paratest": "^7.3.1",
                 "laravel/framework": "^10.48.22",
                 "laravel/pint": "^1.18.1",
-                "laravel/sail": "^1.36.0",
+                "laravel/sail": "^1.32.0",
                 "laravel/sanctum": "^3.3.3",
                 "laravel/tinker": "^2.10.0",
                 "nunomaduro/larastan": "^2.9.8",
