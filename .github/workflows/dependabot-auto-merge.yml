@@ -6,6 +6,12 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+      - 'composer.json'
+      - 'composer.lock'
+      - '.github/workflows/**'
 
 permissions:
   pull-requests: write
