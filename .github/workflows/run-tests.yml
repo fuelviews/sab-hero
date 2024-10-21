@@ -13,6 +13,10 @@ on:
       - 'composer.json'
       - 'composer.lock'
 
+permissions:
+  pull-requests: write
+  contents: write
+
 jobs:
   test:
     runs-on: ${{ matrix.os }}
