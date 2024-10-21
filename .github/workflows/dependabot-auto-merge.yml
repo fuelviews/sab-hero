@@ -27,12 +27,6 @@ jobs:
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
-      - name: Update branch with latest from development
-        if: ${{ github.event.pull_request.merged == false }}
-        run: git fetch origin main && git rebase origin/main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Wait for status checks to pass
         uses: actions/github-script@v6
         with:
