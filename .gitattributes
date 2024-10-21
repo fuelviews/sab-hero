@@ -20,5 +20,5 @@
 /phpstan-baseline.neon  export-ignore
 
 # Merge ours
-package-lock.json merge=ours
-composer.lock merge=ours
+# package-lock.json merge=ours
+# composer.lock merge=ours
