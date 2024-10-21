@@ -59,7 +59,7 @@ jobs:
 
       - name: Configure GitHub Token
         env:
-          GH_TOKEN: ${{ steps.get_workflow_token.outputs.token }}
+          GH_TOKEN: ${{ secrets.GHA_PERSONAL_ACCESS_TOKEN }}
         run: |
           git config --global url."https://${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
           git config --global url."https://${GH_TOKEN}@github.com/".insteadOf "git@github.com:"
