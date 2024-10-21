@@ -15,7 +15,7 @@ jobs:
   dependabot:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    if: ${{ github.actor == 'dependabot[bot]' || github.actor == 'dependabot' }}
+#    if: ${{ github.actor == 'dependabot[bot]' || github.actor == 'dependabot' }}
 
     steps:
       - name: Checkout the code
@@ -37,7 +37,7 @@ jobs:
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: "|
+          script: |
             const pr = await github.pulls.get({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -64,7 +64,7 @@ jobs:
             const failedChecks = checks.data.check_runs.filter(check => check.conclusion === 'failure');
             if (failedChecks.length > 0) {
               throw new Error(`Some checks failed: ${failedChecks.map(check => check.name).join(', ')}`);
-            }"
+            }
 
       - name: Auto-merge Dependabot PRs for semver-minor updates
         if: ${{ steps.metadata.outputs.update-type == 'version-update:semver-minor' }}
