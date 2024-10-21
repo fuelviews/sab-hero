@@ -3,8 +3,8 @@ name: Fix PHP Code Style Issues
 on:
   workflow_dispatch:
 
-  pull_request:
-    branches:
+  push:
+    branches-ignore:
       - main
 
 permissions:
@@ -27,4 +27,4 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Fix styling
+          commit_options: --amend --no-edit
