@@ -6,12 +6,6 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - 'package.json'
-      - 'package-lock.json'
-      - 'composer.json'
-      - 'composer.lock'
-      - '.github/workflows/**'
 
 permissions:
   pull-requests: write
@@ -35,9 +29,42 @@ jobs:
 
       - name: Update branch with latest from development
         if: ${{ github.event.pull_request.merged == false }}
-        run: git fetch origin development && git rebase origin/development
+        run: git fetch origin main && git rebase origin/main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Wait for status checks to pass
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: "|
+            const pr = await github.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number
+            });
+
+            // Wait until all status checks pass
+            let checks = await github.checks.listForRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: pr.data.head.sha,
+            });
+
+            while (checks.data.check_runs.some(check => check.status !== 'completed')) {
+              console.log('Waiting for checks to complete...');
+              await new Promise(resolve => setTimeout(resolve, 10000)); // Wait 10 seconds before re-checking
+              checks = await github.checks.listForRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: pr.data.head.sha,
+              });
+            }
+
+            const failedChecks = checks.data.check_runs.filter(check => check.conclusion === 'failure');
+            if (failedChecks.length > 0) {
+              throw new Error(`Some checks failed: ${failedChecks.map(check => check.name).join(', ')}`);
+            }"
 
       - name: Auto-merge Dependabot PRs for semver-minor updates
         if: ${{ steps.metadata.outputs.update-type == 'version-update:semver-minor' }}
@@ -47,7 +74,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Auto-merge Dependabot PRs for semver-patch updates
-        if: ${{steps.metadata.outputs.update-type == 'version-update:semver-patch' }}
+        if: ${{ steps.metadata.outputs.update-type == 'version-update:semver-patch' }}
         run: gh pr merge --auto --rebase "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url }}
