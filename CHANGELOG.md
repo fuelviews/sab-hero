@@ -2,6 +2,16 @@
 
 All notable changes to `sab-hero` will be documented in this file.
 
+## v0.0.9 - 2024-11-11
+
+### What's Changed
+
+* Add test execution step to the GitHub Actions workflow. by @thejmitchener in https://github.com/fuelviews/sab-hero/pull/21
+* Bump livewire/livewire from 3.5.0 to 3.5.12 by @dependabot in https://github.com/fuelviews/sab-hero/pull/31
+* Bump symfony/process from 6.4.12 to 6.4.14 in the composer group across 1 directory by @dependabot in https://github.com/fuelviews/sab-hero/pull/34
+
+**Full Changelog**: https://github.com/fuelviews/sab-hero/commits/v0.0.9
+
 ## v0.0.8 - 2024-10-21
 
 ### What's Changed
